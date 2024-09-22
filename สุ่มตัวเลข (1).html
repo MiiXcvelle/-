@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สุ่มตัวเลข</title>
+</head>
+<body>
+    <header class="header">
+        <H1 style="font-size: 40px;" class="H1">เกมสุ่มตัวเลข</H1>
+    </header>
+    <h4></h4>
+    <input class="input" type="number" value="" placeholder="กรุณาใส่ตัวเลขที่มีค่าสูงสุด" id="userInput">
+    <button class="button" type="button" onclick="generateRandomNumber()">เริ่มเลย!</button>
+    <h2></h2>
+    <a class="outputset"><p class="output" id="result"></p></a>
+    <h2></h2>
+    <h1></h1>
+    <script>
+    //ฟั่งชั่นสุ่ม เลข
+        function generateRandomNumber() {
+            const userInput = parseInt(document.getElementById("userInput").value);
+            const min = 1; // จำนวนที่ น้อยสุด
+            const max = userInput; // จำนวนมาที่สุด ตามค่าที่ใส่
+            const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+            document.getElementById("result").textContent = `หมายเลขที่ออกคือ: หมายเลขที่ ${randomNumber} !!!`;
+        }
+    </script>
+    <style>
+        html , body{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(83, 29, 38);
+            background-size: cover;
+        }
+
+        .button{
+            border-radius: 10px;
+            background-color: rgba(132, 0, 255, 0.578);
+            font-size: 20px;
+            margin: auto;
+            justify-items: flex-end;
+            display: flex;
+        }
+
+        .button:hover{
+            transform: scale(1.04);
+            transition: 0.5s ease;
+        }
+
+        .input{
+            background-color: rgba(255, 255, 255, 0.664);
+            font-size: 19px;
+            border-top-left-radius:12px ;
+            border-bottom-left-radius:12px ;
+            margin: auto;
+            justify-items: flex-start;
+            display: flex;
+            cursor: pointer;
+        }
+
+        .input:hover{
+            transform: scale(1.05);
+        }
+
+        .H1{
+            color: rgb(255, 41, 184);
+            border: solid 3px rgb(255, 3, 3);
+            border-radius: 30px;
+            display: flex;
+            justify-items: center;
+            margin: auto;
+            cursor: default;
+
+        }
+
+        .header{
+            justify-items: flex-start;
+            display: flex;
+
+        }
+
+        .output{
+            font-size: 26px;
+            background-color: rgba(255, 255, 255, 0.737);
+            border-radius: 20px;
+            margin: auto;
+            justify-items: flex-start;
+            display: flex;
+        }
+
+        .outputset{
+            justify-items: flex-start;
+            display: flex;
+
+        }
+
+        .footer{
+            background-color: rgba(255, 131, 187, 0.861);
+            height: 60px;
+            margin: 0;
+            padding: 0;
+            justify-items: flex-start;
+            display: flex;
+        }
+
+        .but{
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .Developer{
+            justify-items: flex-start;
+            display: flex;
+            margin: auto;
+            text-decoration: none;
+        }
+
+        .เกี่ยวกับเรา{
+            justify-items: flex-start;
+            display: flex;
+            margin: auto;
+            text-decoration: none;
+        }
+
+        .but:hover{
+            background-color: lightblue;
+            border: solid red 3px;
+        }
+        
+    </style>
+    <footer class="footer">
+        <h3 style="font-style: oblique;" style="font-size: x-large;">BY Michelle</h3>
+        <a class="เกี่ยวกับเรา" href="https://web.facebook.com/profile.php?id=100009163247873"><button class="but" target="_blank">เกี่ยวกับเรา</button>
+            <i class="fab fa-github"></i>
+        </a>
+        <a class="Developer" href="https://github.com/NICE-ERROR"><button class="but" type="button">Developer</button></a>
+    </footer>
+</body>
+</html>
+kuay kong
